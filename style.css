@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Ubuntu:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  padding: 1em 10em;
+  height: 6em;
+  position: fixed;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+nav ul li {
+  display: inline;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: Ubuntu;
+}
+nav .carts {
+  display: block;
+}
+nav .carts i {
+  font-size: 2em;
+  color: black;
+  position: relative;
+}
+nav .carts i .item-count {
+  padding: 0.5em;
+  background: red;
+  border-radius: 50%;
+  font-size: 8px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+nav .carts .cart {
+  background: white;
+  padding: 2em;
+  width: 30em;
+  font-family: Ubuntu;
+  font-style: italic;
+  margin-top: 2em;
+  position: relative;
+  display: none;
+  position: absolute;
+  margin-left: -20em;
+  color: black;
+}
+nav .carts .cart .added {
+  width: 100%;
+  height: 10em;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+nav .carts .cart .added div {
+  height: 100%;
+  padding: 1em;
+  font-style: normal;
+}
+nav .carts .cart .added div h2 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+nav .carts .cart .added div p {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+nav .carts .cart .added div button {
+  background: red;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.4em;
+  padding: 0.5em 1em;
+}
+nav .carts .cart .added img {
+  height: 100%;
+}
+nav h1 {
+  font-size: 2em;
+  font-family: Rubik;
+}
+
+footer, .banner-2, .container, .banner {
+  padding: 2em 10em;
+}
+
+.banner {
+  height: 100vh;
+  background: url("./hero4.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+}
+.banner .hero {
+  width: 40%;
+}
+.banner .hero h2 {
+  font-size: 3.5em;
+  font-family: Rubik;
+}
+.banner .hero p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-family: Ubuntu;
+  margin: 1em 0;
+}
+.banner .hero a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: black;
+  background: url("./button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1em 2em;
+  height: 5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.container h2 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  font-family: Rubik;
+}
+.container p {
+  font-size: 1.4em;
+  width: 60%;
+  font-family: Ubuntu;
+  margin-bottom: 1em;
+}
+.container .products {
+  width: 100%;
+  padding: 2em 0;
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+.container .products .product {
+  padding: 1em;
+  width: 23%;
+  background: #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.container .products .product img {
+  width: 100%;
+}
+.container .products .product h3 {
+  margin: 1em 0;
+  font-size: 1.6em;
+  font-family: Rubik;
+}
+.container .products .product p {
+  width: 90%;
+  margin: unset;
+}
+.container .products .product span.price {
+  background: black;
+  padding: 0.5em;
+  color: white;
+  font-size: 1.4em;
+  position: absolute;
+  top: 1;
+  font-family: Ubuntu;
+  left: 0.7em;
+}
+.container .products .product .rate {
+  margin: 1em 0;
+  font-size: 1.3em;
+}
+.container .products .product button {
+  width: 60%;
+  height: 3em;
+  background: rgb(120, 188, 120);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  font-family: Rubik;
+}
+
+.banner-2 {
+  height: 50em;
+  background: url("./banner/b4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+}
+.banner-2 .text {
+  width: 40%;
+}
+.banner-2 .text h4 {
+  font-size: 3em;
+  font-family: Rubik;
+}
+.banner-2 .text p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: Ubuntu;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  font-family: Rubik;
+}
+
+.top-product {
+  width: 22%;
+  background: #e1e1e1;
+  padding: 1em;
+  position: relative;
+}
+.top-product img {
+  width: 100%;
+}
+.top-product h5 {
+  font-size: 1.7em;
+  margin-top: 1em;
+}
+.top-product h6.price {
+  font-size: 1.3em;
+}
+.top-product .prodetails {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+}
+.top-product .prodetails .rate {
+  margin-bottom: 2em;
+}
+.top-product .prodetails p {
+  width: unset;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in;
+}
+.top-product .prodetails button {
+  width: 60%;
+  height: 3em;
+  background: rgb(120, 188, 120);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  font-family: Rubik;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+.top-product:hover {
+  overflow: hidden;
+}
+.top-product:hover .prodetails {
+  opacity: 1;
+}
+.top-product:hover .prodetails P {
+  transform: translateY(0);
+}
+.top-product:hover .prodetails button {
+  transform: translateX(0%);
+}
+
+img.banners {
+  width: 100%;
+}
+
+.features {
+  padding: 3em 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Rubik;
+}
+.features h6 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+.features .featurelist {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+}
+.features .featurelist .feature {
+  width: 20em;
+  height: 20em;
+  background: #e1e1e1;
+  text-align: center;
+  padding: 1em;
+}
+.features .featurelist .feature img {
+  width: 100%;
+  height: 80%;
+}
+.features .featurelist .feature h6 {
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+footer {
+  background: url("./banner/b14.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35em;
+  background-color: black;
+}
+footer .store-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0;
+}
+footer .store-details .left,
+footer .store-details .right {
+  width: 40%;
+}
+footer .store-details .left {
+  color: white;
+}
+footer .store-details .left img {
+  background-color: white;
+}
+footer .store-details .left p {
+  font-size: 1.3em;
+  font-family: Ubuntu;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+footer .store-details .right h6 {
+  color: white;
+  font-size: 2.2em;
+  margin: 1em 0;
+  font-family: Rubik;
+}
+footer .credit {
+  text-align: center;
+  padding: 1em 0;
+}
+footer .credit p {
+  color: white;
+  font-family: Ubuntu;
+  font-size: 1.4em;
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    padding: 2em;
+    position: relative;
+  }
+  nav ul {
+    display: none;
+  }
+  .banner,
+.banner-2 {
+    padding: 2em;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner .hero,
+.banner-2 .hero {
+    width: 50%;
+  }
+  .banner .hero h2,
+.banner-2 .hero h2 {
+    font-size: 1.8em;
+  }
+  .banner .hero p,
+.banner-2 .hero p {
+    font-size: 1.3em;
+  }
+  .container {
+    padding: 2em;
+  }
+  .container p {
+    width: 80%;
+  }
+  .container .products {
+    justify-content: center;
+  }
+  .container .products .product {
+    width: 80%;
+  }
+  .container .products .top-product {
+    width: 80%;
+  }
+  .features {
+    padding: 2em;
+  }
+  .features .featurelist {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    gap: 1.5em;
+  }
+  .features .featurelist::-webkit-scrollbar {
+    display: none;
+  }
+  .features .featurelist .feature {
+    padding: 1em;
+  }
+  .features .featurelist .feature img {
+    width: 15em;
+  }
+  .features .featurelist .feature h6 {
+    font-size: 1.3em;
+  }
+  footer {
+    padding: 3em 2em;
+    background-size: 100%;
+    height: unset;
+  }
+  footer .store-details {
+    flex-direction: column;
+  }
+  footer .store-details .left,
+footer .store-details .right {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

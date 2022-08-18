@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// body {
+//     // background-color: red;
+// }
+
+nav {
+  padding: 1em 10em;
+  // background:#2b6cb3;
+  height: 6em;
+  position: fixed;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba($color: #000000, $alpha: 0.1);
+
+  ul {
+    li {
+      display: inline;
+      padding: 0.5em 1em;
+      font-size: 1.5em;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-family: Ubuntu;
+      }
+    }
+  }
+
+  .carts {
+    display: block;
+
+    i {
+      font-size: 2em;
+      color: black;
+
+      position: relative;
+
+      .item-count {
+        padding: 0.5em;
+        background: red;
+        border-radius: 50%;
+        font-size: 8px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+      }
+    }
+
+    .cart {
+      background: white;
+      padding: 2em;
+      width: 30em;
+      font-family: Ubuntu;
+      font-style: italic;
+      margin-top: 2em;
+
+      position: relative;
+      display: none;
+      position: absolute;
+      margin-left: -20em;
+      color: black;
+
+      .added {
+        width: 100%;
+        height: 10em;
+        display: flex;
+        margin-bottom: 0.5em;
+
+        div {
+          height: 100%;
+          padding: 1em;
+          font-style: normal;
+
+          h2 {
+            font-size: 1.7em;
+            margin-bottom: 0.5em;
+          }
+
+          p {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+          }
+
+          button {
+            background: red;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 1.4em;
+            padding: 0.5em 1em;
+          }
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2em;
+    font-family: Rubik;
+  }
+}
+
+%padding {
+  padding: 2em 10em;
+}
+
+.banner {
+  height: 100vh;
+  @extend %padding;
+  background: url("./hero4.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+
+  .hero {
+    width: 40%;
+
+    h2 {
+      font-size: 3.5em;
+      font-family: Rubik;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.5;
+      font-family: Ubuntu;
+      margin: 1em 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.3em;
+      color: black;
+      background: url("./button.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 1em 2em;
+      height: 5em;
+      // background-color: red;
+    }
+  }
+}
+
+.container {
+  @extend %padding;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  // justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    font-family: Rubik;
+  }
+
+  p {
+    font-size: 1.4em;
+    width: 60%;
+    font-family: Ubuntu;
+    margin-bottom: 1em;
+  }
+
+  .products {
+    // background: #ddd;
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+
+    .product {
+      padding: 1em;
+      width: 23%;
+      background: #e1e1e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      h3 {
+        margin: 1em 0;
+        font-size: 1.6em;
+        font-family: Rubik;
+      }
+
+      p {
+        width: 90%;
+        margin: unset;
+      }
+
+      span.price {
+        background: black;
+        padding: 0.5em;
+        color: white;
+        font-size: 1.4em;
+        position: absolute;
+        top: 1;
+        font-family: Ubuntu;
+        left: 0.7em;
+      }
+
+      .rate {
+        margin: 1em 0;
+        font-size: 1.3em;
+      }
+
+      button {
+        width: 60%;
+        height: 3em;
+        background: rgb(120, 188, 120);
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 1.5em;
+        font-family: Rubik;
+      }
+    }
+  }
+}
+
+.banner-2 {
+  height: 50em;
+  @extend %padding;
+  background: url("./banner/b4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+
+  .text {
+    width: 40%;
+
+    h4 {
+      font-size: 3em;
+      font-family: Rubik;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.5;
+      font-family: Ubuntu;
+      margin: 1em 0;
+    }
+  }
+}
+
+h4 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  font-family: Rubik;
+}
+
+.top-product {
+  width: 22%;
+  // height: 30em;
+  background: #e1e1e1;
+  padding: 1em;
+  position: relative;
+  // transition: 3s ease-in;
+  // overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 1.7em;
+    margin-top: 1em;
+  }
+
+  h6.price {
+    font-size: 1.3em;
+  }
+
+  .prodetails {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    // transition: 0.5s ease;
+    // z-index: -1;
+    opacity: 0;
+
+    .rate {
+      margin-bottom: 2em;
+    }
+
+    p {
+      width: unset;
+      transform: translateY(-50%);
+      transition: transform 0.5s ease-in;
+    }
+
+    button {
+      width: 60%;
+      height: 3em;
+      background: rgb(120, 188, 120);
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 1.5em;
+      font-family: Rubik;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in;
+    }
+  }
+}
+
+.top-product:hover {
+  overflow: hidden;
+
+  .prodetails {
+    opacity: 1;
+    // border-radius: 50%;
+
+    P {
+      transform: translateY(0);
+    }
+
+    button {
+      transform: translateX(0%);
+    }
+  }
+}
+
+img.banners {
+  width: 100%;
+  // height: 60em;
+}
+
+.features {
+  padding: 3em 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Rubik;
+
+  h6 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  .featurelist {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+
+    .feature {
+      width: 20em;
+      height: 20em;
+      background: #e1e1e1;
+      text-align: center;
+      padding: 1em;
+
+      img {
+        width: 100%;
+        height: 80%;
+      }
+
+      h6 {
+        font-size: 1.5em;
+        padding: 0.5em;
+      }
+    }
+  }
+}
+
+footer {
+  @extend %padding;
+  background: url("./banner/b14.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35em;
+  background-color: black;
+
+  .store-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+
+    .left,
+    .right {
+      width: 40%;
+    }
+
+    .left {
+      color: white;
+
+      img {
+        background-color: white;
+      }
+
+      p {
+        font-size: 1.3em;
+        font-family: Ubuntu;
+        line-height: 1.5;
+        margin: 1em 0;
+      }
+    }
+
+    .right h6 {
+      color: white;
+      font-size: 2.2em;
+      margin: 1em 0;
+      font-family: Rubik;
+    }
+  }
+
+  .credit {
+    text-align: center;
+    padding: 1em 0;
+    p {
+      color: white;
+      font-family: Ubuntu;
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    padding: 2em;
+    position: relative;
+
+    ul {
+      display: none;
+    }
+  }
+  .banner,
+  .banner-2 {
+    padding: 2em;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+
+    .hero {
+      width: 50%;
+      h2 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .container {
+    padding: 2em;
+
+    p {
+      width: 80%;
+    }
+
+    .products {
+      justify-content: center;
+      // display: block;
+
+      .product {
+        width: 80%;
+      }
+
+      .top-product {
+        width: 80%;
+      }
+    }
+  }
+
+  .features {
+    padding: 2em;
+    .featurelist {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      gap: 1.5em;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .feature {
+        // width: 60%;
+        // height: 200px;
+        padding: 1em;
+        // background: red;
+
+        img {
+          width: 15em;
+        }
+
+        h6 {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 3em 2em;
+    background-size: 100%;
+    height: unset;
+
+    .store-details {
+      flex-direction: column;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+    }
+  }
+}
